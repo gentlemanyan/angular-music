@@ -1,0 +1,79 @@
+<nav>
+  <div class="navbar"> 
+    <div class="navbar_board">网易云音乐</div>
+    <div class="navbar_search">
+      <nz-dropdown [nzTrigger]="'click'">
+        <input type="text" class="navbar_search_input" autocomplete="off"
+        placeholder="搜索音乐、歌手、歌词、专辑" nz-dropdown>
+        <ul nz-menu>
+          <li nz-menu-item>1st menu item</li>
+          <li nz-menu-item>2nd menu item</li>
+          <li nz-menu-item>3rd menu item</li>
+        </ul>
+      </nz-dropdown>
+    </div>
+    <ul class="navbar_list">
+      <user class="inline-block"></user>
+      <a class="navbar_list_item" href="javascript:void(0)"><span class="anticon anticon-skin"></span></a>
+      <a class="navbar_list_item" href="javascript:void(0)"><span class="fa fa-envelope-o fa-lg fa-fw"></span></a>
+      <a class="navbar_list_item" href="javascript:void(0)"><span class="fa fa-cog fa-lg fa-fw"></span></a>
+    </ul>
+  </div>
+</nav>
+<main class="container">
+  <nz-root>
+    <div class="sidebar">
+      <div class="sidebar-container">
+        <div class="sidebar-container_list">
+          <h3>推荐</h3>
+          <ul class="sidebar-container_content">
+            <li [routerLink]="['./home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <span class="fa fa-music fa-lg"></span>
+              <a href="javascript:void(0)" >发现音乐</a>
+            </li>
+            <li [routerLink]="['./FM']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <span class="fa fa-podcast fa-lg"></span>
+              <a href="javascript:void(0)" >私人FM</a>
+            </li>
+            <li [routerLink]="['./MV']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <span class="fa fa-video-camera fa-lg"></span>
+              <a href="javascript:void(0)" >MV</a>
+            </li>
+            <li [routerLink]="['./firend']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              <span class="fa fa-users fa-lg"></span>
+                <a href="javascript:void(0)" >朋友</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-container_list">
+          <h3>我的音乐</h3>
+          <ul class="sidebar-container_content">
+            <li>
+              <span class="fa fa-music fa-lg"></span>
+              <a href="javascript:void(0)" [routerLink]="['./local-music']">本地音乐</a>
+            </li>
+            <li><i class="anticon anticon-download" style="font-size: 14px;font-weight: bold"></i>
+              <a href="javascript:void(0)" [routerLink]="['./download-manager']">下载管理</a>
+            </li>
+            <li><i class="anticon anticon-cloud-o" style="font-size: 14px;font-weight: bold"></i>
+              <a href="javascript:void(0)" [routerLink]="['./cloud-music']">我的音乐云盘</a>
+            </li>
+            <li><span class="fa fa-user-o fa-lg"></span><a href="javascript:void(0)" [routerLink]="['./my-singer']">我的歌手</a></li>
+            <li><span class="fa fa-video-camera fa-lg"></span><a href="javascript:void(0)" [routerLink]="['./my-mv']">我的MV</a></li>
+          </ul>
+        </div>
+        <div class="sidebar-container_list">
+          <h3 style="display: inline-block">创建的歌单</h3>
+          <a href="javascript:void(0)" style="float: right; color: #ccc; margin-left: 8px;margin-top: 5px;line-height: 20px;"><span class="fa fa-chevron-right fa-lg"></span></a>
+          <a href="javascript:void(0)" style="float: right; color: #ccc; margin-top: 5px; line-height: 20px;"><span class="fa fa-plus-circle fa-lg"></span></a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-left: 260px; margin-right: 0; padding-left: 30px;">
+      <div style="margin-top: 50px; width: 1070px;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </nz-root>
+</main>
+<footer></footer>

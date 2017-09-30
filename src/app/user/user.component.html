@@ -1,0 +1,64 @@
+<div (click)="isVisible = true" class="user">
+  <a href="javascript:void(0)" class="user_avatar">
+    <img [src]="user.avatar">
+  </a>
+  <a href="javascript:void(0)" class="user_btn">登录</a>
+</div>
+<nz-modal [nzVisible]="isVisible" [nzTitle]="modalTitle" [nzContent]="modalContent"
+[nzFooter]="modalFooter" (nzOnCancel)="hideModal($event)" style="min-height: 500px">
+    <ng-template #modalTitle>
+      登录
+    </ng-template>
+    <ng-template #modalContent>
+      <form nz-form [nzType]="'horizontal'" [formGroup]="validateForm" (ngSubmit)="submitForm($event,validateForm.value)">
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>用户名</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="12" [nzValidateStatus]="getFormControl('usercode')" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="usercode" name="successValid">
+            </nz-input>
+            <div nz-form-explain *ngIf="getFormControl('usercode').dirty && getFormControl('usercode').hasError('usercode')">
+                帐号不存在!
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="6">
+            <label nz-form-item-required>密码</label>
+          </div>
+          <div nz-form-control nz-col [nzSpan]="12" [nzValidateStatus]="getFormControl('password')" nzHasFeedback>
+            <nz-input [nzSize]="'large'" formControlName="password" name="errorValid">
+            </nz-input>
+            <div nz-form-explain *ngIf="getFormControl('password').dirty && getFormControl('password').hasError('password')">
+              密码错误!
+            </div>
+          </div>
+        </div>
+        <div nz-form-item nz-row>
+          <div [nzOffset]="6" nz-col [nzSpan]="12" nz-form-control>
+            <button nz-button [nzType]="'danger'" nz-col [nzSpan]="24" style="background: #d73435; border-color: #d73435; color: #fff"
+            [nzSize]="'large'" [disabled]="!validateForm.valid" (click)="login()">login</button>
+          </div>
+        </div>
+        <!-- <div nz-form-item nz-row>
+          <div nz-form-label nz-col [nzSpan]="5">
+            <label>Validating</label
+          </div>
+          <div nz-col [nzSpan]="12" nz-form-control [nzValidateStatus]="'validating'" nzHasFeedback>
+            <nz-input [ngModel]="'The content is being validating'" [nzSize]="'large'" name="validating">
+            </nz-input>
+            <div nz-form-explain>I'm the content is being validating</div>
+          </div>
+        </div> -->
+      </form>
+    </ng-template>
+    <!-- <ng-template #modalFooter>
+      <button nz-button [nzType]="'default'" [nzSize]="'large'" (click)="handleCancel($event)">
+        返 回
+      </button>
+      <button nz-button [nzType]="'primary'" [nzSize]="'large'" (click)="handleOk($event)" [nzLoading]="isConfirmLoading">
+        提 交
+      </button>
+    </ng-template> -->
+ </nz-modal>

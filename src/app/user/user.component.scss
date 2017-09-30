@@ -1,0 +1,27 @@
+.user_avatar {
+  display: inline-block;
+  width: 26px;
+  height: 26px; 
+  background: #fff;  
+  border-radius: 50%;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.user_btn {
+  margin-left: 5px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.login-form {
+  max-width: 300px;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}

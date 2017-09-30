@@ -1,0 +1,145 @@
+/*styles for home content only*/
+
+$carousel-min-heihgt: 249px;
+$carousel-devia-left: -150px;    //左侧偏移
+$carousel-devia-right: 592px;    //右侧偏移
+
+.carousel {
+  min-height: $carousel-min-heihgt;
+  margin: 20px 0;
+  position: relative;
+
+  & > .carousel-list {
+    min-height: $carousel-min-heihgt;
+
+    .carousel-list_item {
+      position: absolute;
+      width: 600px;
+    }
+
+    .carousel-list_item--hide {
+      display: none;
+    }
+    
+    .carousel-list_item--active {
+      left: 221.25px;
+      z-index: 500;
+      box-shadow: 1px 12px 12px #888;
+    }
+    
+    .carousel-list_item--preActive {
+      left: $carousel-devia-left;
+      box-shadow: 1px 6px 6px #888;
+      transform: scaleY(0.8) rotateY(60deg);
+      -ms-transform: scaleY(0.8) rotateY(60deg); 	/* IE 9 */
+      -moz-transform: scaleY(0.8) rotateY(60deg); 	/* Firefox */
+      -webkit-transform: scaleY(0.8) rotateY(60deg); /* Safari 和 Chrome */
+      -o-transform: scaleY(0.8) rotateY(60deg); 	/* Opera*/
+    }
+    .carousel-list_item--nextActive {
+      left: $carousel-devia-right;
+      box-shadow: 1px 6px 6px #888;
+      transform: scaleY(0.8) rotateY(60deg);
+      -ms-transform: scaleY(0.8) rotateY(60deg); 	/* IE 9 */
+      -moz-transform: scaleY(0.8) rotateY(60deg); 	/* Firefox */
+      -webkit-transform: scaleY(0.8) rotateY(60deg); /* Safari 和 Chrome */
+      -o-transform: scaleY(0.8) rotateY(60deg); 	/* Opera*/
+    }
+  }
+
+  & > .carousel-slider {
+    position: absolute;
+    left: 40%;
+    bottom: -40px;
+
+    &:after {
+      display: table;
+      content: "";
+      clear: both;
+      line-height: 0;
+    }
+
+    & > .carousel-slider_item {
+      float: left;
+      width: 20px;
+      height: 5px;
+      line-height: 12px;
+      margin-left: 10px;
+      background: #ccc;
+      list-style: none;
+  
+      &:hover {
+        background: #c03a3a;
+      }
+    }
+
+    & > .carousel-slider_item--active {
+      background: #c03a3a;
+    }
+  }
+}
+
+// @keyframes carousel {
+//   from {
+//     transform: scaleY(1) rotateY(0);
+//     -ms-transform: scaleY(1) rotateY(0) ; 	/* IE 9 */
+//     -moz-transform: scaleY(1) otateY(0); 	/* Firefox */
+//     -webkit-transform: scaleY(1) rotateY(0); /* Safari 和 Chrome */
+//     -o-transform: scaleY(1) rotateY(0);
+//   }
+//   to {
+//     transform: scaleY(0.8) rotateY(60deg);
+//     -ms-transform: scaleY(0.8) rotateY(60deg); 	/* IE 9 */
+//     -moz-transform: scaleY(0.8) rotateY(60deg); 	/* Firefox */
+//     -webkit-transform: scaleY(0.8) rotateY(60deg); /* Safari 和 Chrome */
+//     -o-transform: scaleY(0.8) rotateY(60deg); 	/* Opera*/
+//   }
+// }
+
+// @-moz-keyframes carousel {
+//   from {
+//     transform: scaleY(1) rotateY(0);
+//     -ms-transform: scaleY(1) rotateY(0) ; 	/* IE 9 */
+//     -moz-transform: scaleY(1) otateY(0); 	/* Firefox */
+//     -webkit-transform: scaleY(1) rotateY(0); /* Safari 和 Chrome */
+//     -o-transform: scaleY(1) rotateY(0);
+//   }
+//   to {transform: scaleY(0.8) rotateY(60deg);
+//   -ms-transform: scaleY(0.8) rotateY(60deg) ; 	/* IE 9 */
+//   -moz-transform: scaleY(0.8) rotateY(60deg); 	/* Firefox */
+//   -webkit-transform: scaleY(0.8) rotateY(60deg); /* Safari 和 Chrome */
+//   -o-transform: scaleY(0.8) rotateY(60deg); 	/* Opera*/
+//   }
+// }
+
+// @-webkit-keyframes carousel {
+//   from {
+//     transform: scaleY(1) rotateY(0);
+//     -ms-transform: scaleY(1) rotateY(0) ; 	/* IE 9 */
+//     -moz-transform: scaleY(1) otateY(0); 	/* Firefox */
+//     -webkit-transform: scaleY(1) rotateY(0); /* Safari 和 Chrome */
+//     -o-transform: scaleY(1) rotateY(0);
+//   }
+//   to {transform: scaleY(0.8) rotateY(60deg);
+//     -ms-transform: scaleY(0.8) rotateY(60deg) ; 	/* IE 9 */
+//     -moz-transform: scaleY(0.8) rotateY(60deg); 	/* Firefox */
+//     -webkit-transform: scaleY(0.8) rotateY(60deg); /* Safari 和 Chrome */
+//     -o-transform: scaleY(0.8) rotateY(60deg); 	/* Opera*/
+//   }
+// }
+
+// @-o-keyframes carousel {
+//   from { transform: scaleY(1) rotateY(0);
+//     -ms-transform: scaleY(1) rotateY(0) ; 	/* IE 9 */
+//     -moz-transform: scaleY(1) otateY(0); 	/* Firefox */
+//     -webkit-transform: scaleY(1) rotateY(0); /* Safari 和 Chrome */
+//     -o-transform: scaleY(1) rotateY(0);
+//   }
+//   to {
+//     transform: scaleY(0.8) rotateY(60deg);
+//     -ms-transform: scaleY(0.8) rotateY(60deg) ; 	/* IE 9 */
+//     -moz-transform: scaleY(0.8) rotateY(60deg); 	/* Firefox */
+//     -webkit-transform: scaleY(0.8) rotateY(60deg); /* Safari 和 Chrome */
+//     -o-transform: scaleY(0.8) rotateY(60deg); 	/* Opera*/
+//   }
+// }

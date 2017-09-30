@@ -1,0 +1,28 @@
+.navbar-list {
+  width: 600px;
+  margin: auto;
+
+   &:after {
+      display: table;
+      content: "";
+      clear: both;
+   }
+
+   & > li {
+    float: left;    
+    min-width: 85px;
+    padding: 12px 5px;
+    list-style: none;
+    text-align: center;
+
+    & > a {
+      color: #000;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    & > a:hover {
+      color: #f00;
+    }
+  }
+}
