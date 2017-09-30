@@ -1,8 +1,8 @@
 /*styles for home content only*/
 
-$carousel-min-heihgt: 249px;
-$carousel-devia-left: -150px;    //左侧偏移
-$carousel-devia-right: 592px;    //右侧偏移
+$carousel-min-heihgt: 190px;
+$carousel-devia-left: -125px;    //左侧偏移
+$carousel-devia-right: 525px;    //右侧偏移
 
 .carousel {
   min-height: $carousel-min-heihgt;
@@ -14,7 +14,7 @@ $carousel-devia-right: 592px;    //右侧偏移
 
     .carousel-list_item {
       position: absolute;
-      width: 600px;
+      width: 500px;
     }
 
     .carousel-list_item--hide {
@@ -22,7 +22,7 @@ $carousel-devia-right: 592px;    //右侧偏移
     }
     
     .carousel-list_item--active {
-      left: 221.25px;
+      left: 200px;
       z-index: 500;
       box-shadow: 1px 12px 12px #888;
     }

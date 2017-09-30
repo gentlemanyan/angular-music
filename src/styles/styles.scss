@@ -23,3 +23,10 @@ input:focus {
 .inline-block {
   display: inline-block;
 }
+
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}

@@ -1,11 +1,11 @@
-$nav-line-height: 34px;
+$nav-line-height: 26px;
 
 nav {
   position:fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-width: 1330px; 
+  min-width: 1190px; 
   height: 50px;   
   background: #c03a3a; 
   z-index: 1000;
@@ -13,7 +13,7 @@ nav {
 }
 
 .navbar {
-  padding: 8px 12px;  
+  padding: 11px 12px;  
   
   & > .navbar_board {
     display: inline-block;
@@ -27,7 +27,7 @@ nav {
 
   & > .navbar_search {
     display: inline-block;
-    min-width: 600px; 
+    min-width: 460px; 
     padding: 0;
     margin: 0; 
     line-height: $nav-line-height;
@@ -45,7 +45,7 @@ nav {
 
   & > .navbar_list {
     display: inline-block; 
-    min-width: 420px; 
+    min-width: 406px; 
     text-align: right;
     line-height: $nav-line-height;
 
@@ -63,7 +63,7 @@ nav {
 }
 
 .container {
-  min-width: 1330px;
+  min-width: 1190px;
 }
 
 .sidebar {
@@ -108,5 +108,16 @@ nav {
         color: #000;
       }
     }
+  }
+}
+
+.content {
+  margin-left: 260px; 
+  margin-right: 0; 
+  padding-left: 30px;
+
+  .conetent_area {
+    margin-top: 50px; 
+    width: 930px;
   }
 }
