@@ -105,16 +105,44 @@ img {
 }
 
 //歌单
-.music-sheet_list {
-  li {
-    padding: 5px;
-    line-height: 1.5em;
-  }
-  li:nth-child(odd){
-    background: #fff;
+.music-sheet {
+  min-height: 200px; 
+  margin: 20px 30px 20px 0; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box;
+
+  & > .music-sheet_header {
+    width:100%; 
+    height: 30px; 
+    padding: 8px 12px; 
+    background: rgba(8, 8, 8, 0.04);
+
+    span {
+      color: #802727;
+      margin-right: 2%;
+    }
   }
 
-  li:nth-child(even){
-    background: #f7f3f3;
+  & > .music-sheet_conetent {
+    & > .music-sheet_list {
+      float: left;     
+      width: 50%; 
+      border-right: 1px solid #ccc;
+  
+      & > .music-sheet_list_item {
+        padding: 8px 12px;
+        line-height: 1.5em;
+      }
+  
+      & > .music-sheet_list_item:nth-child(even){
+        background: #f7f3f3;
+      }
+  
+      & > .music-sheet_list_item--selected {
+        background: #ccc;
+      }
+  
+    }
   }
+
 }

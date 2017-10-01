@@ -33,37 +33,29 @@
   <div class="hot-header">
     <h2><a href="javascript:void(0)">新歌速递</a></h2>
   </div>
-  <div class="music-sheet clearfix" style="min-height: 200px; margin-right: 30px; margin-top: 20px; border: 1px solid #ccc; box-sizing: border-box;">
-    <div class="music-sheet_left" style="width:100%; height: 30px; padding: 8px 12px; background: #888">播放</div>
-    <div class="music-sheet_right" style="width: 50%; float: left; border-right: 1px solid #ccc;">
+  <div class="music-sheet clearfix">
+    <div class="music-sheet_header">
+      <span class="fa fa-play-circle-o fa-lg"></span>
+      播放全部
+    </div>
+    <div class="music-sheet_content">
       <ul class="music-sheet_list">
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>        
+        <li class="music-sheet_list_item clearfix" *ngFor="let songItem of songArr" (click)="songItem.isSelected = true"
+        [ngClass]="{'music-sheet_list_item--selected': songItem.isSelected}">
+          <div style="float: left; width: 8%;">{{songItem.rank}}</div>
+          <div style="float: left; width: 60%;"><a href="javascript:void(0)">{{songItem.songName}}</a></div>
+          <div style="float: left; width: 30%; text-align: right"><a href="javascript:void(0)">{{songItem.author}}</a></div>    
+        </li>
       </ul>
     </div>
     <div style="width: 50%; float: left">
       <ul class="music-sheet_list">
-        <li>
-          <span>01</span>
-          夜的第七章
+        <li class="music-sheet_list_item clearfix" *ngFor="let songItem of songArr" (click)="songItem.isSelected = true"
+        [ngClass]="{'music-sheet_list_item--selected': songItem.isSelected}">
+          <div style="float: left; width: 8%;">{{songItem.rank}}</div> 
+          <div style="float: left; width: 60%;"><a href="javascript:void(0)">{{songItem.songName}}</a></div>
+          <div style="float: left; width: 30%; text-align: right"><a href="javascript:void(0)">{{songItem.author}}</a></div>    
         </li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>
-        <li>夜的第七章</li>        
       </ul>
     </div>
   </div>

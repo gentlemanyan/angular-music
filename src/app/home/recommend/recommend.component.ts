@@ -51,6 +51,20 @@ export class RecommendComponent implements OnInit {
     ]
   ];
 
+  public songArr = [
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+    {rank: '01', songName: '夜的第七章', author: '周杰伦，张言'},
+  ];
+
   public color = '#F00';
   /**
    * TypeScript public modifiers
