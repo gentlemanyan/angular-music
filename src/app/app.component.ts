@@ -31,6 +31,8 @@ export class AppComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
+    // 初始化进入recomend模块
+    
     console.log('Initial App State', this.appState.state);
   }
 }

@@ -1,25 +1,31 @@
 $margin-right: 30px;   //最右侧的外边距
 $large-title-padding: 5px;   //大标题的内补
 
-.hot-panel {
+.carousel-wrap {
+  margin-right: $margin-right;
+}
+
+.recomend-panel {
   margin-top: 50px;
 }
 
-.hot-header {
+.recomend-header {
   margin-right: $margin-right;
   padding-bottom: $large-title-padding;
   border-bottom: 1px solid #ccc;
-}
-.hot-header > h2 > a {
-  padding-bottom: $large-title-padding;
-  color:#333;
-  text-decoration: none;
-  cursor: default;
-  border-bottom: 4px solid #ccc;
-}
 
-.carousel-wrap {
-  margin-right: $margin-right;
+  & > h2 > a {
+    padding-bottom: $large-title-padding;
+    color:#333;
+    text-decoration: none;
+    cursor: default;
+    border-bottom: 4px solid #ccc;
+  }
+
+  & > h2 > button {
+    padding: 2px 5px;
+    font-size: 12px;
+  }
 }
 
 .hot-pick {
@@ -35,23 +41,18 @@ $large-title-padding: 5px;   //大标题的内补
   }
 }
 
-.hot-pick > .hot-pick-item {
+.hot-pick > .hot-pick_item {
   float: left;
   width: 202.5px;
   min-height: 130px;
   margin-top: 20px;
   margin-right: $margin-right;
   box-shadow: 1px 1px 1px 1px #ccc;
-}
 
-.hot-pick > .hot-pick-item > a {
-  display: inline-block;
-  height: 130px;
-}
-
-img {
-  width: 100%;
-  height: 100%;
+  & > a {
+    display: inline-block;
+    height: 130px;
+  }
 }
 
 //个性推荐
@@ -122,12 +123,16 @@ img {
       margin-right: 2%;
     }
   }
+  
+  & > .music-sheet_content {
 
-  & > .music-sheet_conetent {
+    & > .music-sheet_list:first-child {
+      border-right: 1px solid #ccc;
+    }
+    
     & > .music-sheet_list {
       float: left;     
       width: 50%; 
-      border-right: 1px solid #ccc;
   
       & > .music-sheet_list_item {
         padding: 8px 12px;
@@ -135,14 +140,48 @@ img {
       }
   
       & > .music-sheet_list_item:nth-child(even){
-        background: #f7f3f3;
+        background: #faf9f9;
       }
   
       & > .music-sheet_list_item--selected {
         background: #ccc;
       }
-  
     }
   }
-
 }
+
+// 歌曲排名样式
+.music-sheet_list_item--rank {
+  float: left;
+  width: 8%;
+}
+
+// 歌曲名
+.music-sheet_list_item--song {
+  float: left;
+  width: 60%;
+
+  & > .music-sheet_list_item--sq {
+    display: inline-block; 
+    padding: 1px;
+    margin-left: 8px;
+    border: 1px solid #F00;          
+    color: #F00; 
+    line-height: 12px;
+    transform: scale(0.6); 
+    -webkit-transform: scale(0.6);
+  }
+
+  & > .music-sheet_list_item--sq + span {
+    margin-left: 8px;
+    color: rgb(146, 25, 31)
+  }
+}
+
+.music-sheet_list_item--author {
+  float: left; 
+  padding-right: 2%;
+  width: 32%; 
+  text-align: right
+}
+

@@ -5,10 +5,10 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  font: 14px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+  height: 100%;    
+  overflow: auto;
+  font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
   color: #fff;
-  height: 100%;  
 }
 
 a {
@@ -24,9 +24,22 @@ input:focus {
   display: inline-block;
 }
 
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
 .clearfix:after {
   display: table;
   line-height: 0;
   content: "";
   clear: both;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }

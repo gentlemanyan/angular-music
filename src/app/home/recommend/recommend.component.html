@@ -1,19 +1,19 @@
 <div class="carousel-wrap">
   <carousel [autoSwitch]="true"></carousel>
 </div>
-<div class="hot-panel">
-  <div class="hot-header">
+<div class="recomend-panel">
+  <div class="recomend-header">
     <h2><a href="javascript:void(0)">热门精选</a></h2>
   </div>
   <ul class="hot-pick"  *ngFor="let items of hotItemArr">
-    <li class="hot-pick-item" *ngFor="let childItem of items">
+    <li class="hot-pick_item" *ngFor="let childItem of items">
       <a href="javascript:void(0)"> <img [src]="childItem.src" alt="热门推荐"></a>
       <h5>{{childItem.content}}</h5>
     </li>
   </ul>
 </div>
-<div class="hot-panel">
-  <div class="hot-header">
+<div class="recomend-panel">
+  <div class="recomend-header">
     <h2><a href="javascript:void(0)">个性化推荐</a></h2>
   </div>
   <ul class="recomend" *ngFor="let items of recomendArr; let rows = index">
@@ -29,32 +29,45 @@
     </div>
   </ul>
 </div>
-<div class="hot-panel">
-  <div class="hot-header">
-    <h2><a href="javascript:void(0)">新歌速递</a></h2>
+<div class="recomend-panel">
+  <div class="recomend-header">
+    <h2>
+      <a href="javascript:void(0)">新歌速递</a>
+      <button type="button" class="pull-right">更多></button>
+    </h2>
   </div>
   <div class="music-sheet clearfix">
     <div class="music-sheet_header">
       <span class="fa fa-play-circle-o fa-lg"></span>
       播放全部
     </div>
-    <div class="music-sheet_content">
+    <div class="music-sheet_content clearfix">
       <ul class="music-sheet_list">
         <li class="music-sheet_list_item clearfix" *ngFor="let songItem of songArr" (click)="songItem.isSelected = true"
         [ngClass]="{'music-sheet_list_item--selected': songItem.isSelected}">
-          <div style="float: left; width: 8%;">{{songItem.rank}}</div>
-          <div style="float: left; width: 60%;"><a href="javascript:void(0)">{{songItem.songName}}</a></div>
-          <div style="float: left; width: 30%; text-align: right"><a href="javascript:void(0)">{{songItem.author}}</a></div>    
+          <div class="music-sheet_list_item--rank">{{songItem.rank}}</div>
+          <div class="music-sheet_list_item--song">
+            <a href="javascript:void(0)">{{songItem.songName}}</a>
+            <div class="music-sheet_list_item--sq">SQ</div>
+            <span class="fa fa-television"></span> 
+          </div>
+          <div class="music-sheet_list_item--author">
+            <a href="javascript:void(0)">{{songItem.author}}</a>
+          </div>    
         </li>
       </ul>
-    </div>
-    <div style="width: 50%; float: left">
       <ul class="music-sheet_list">
         <li class="music-sheet_list_item clearfix" *ngFor="let songItem of songArr" (click)="songItem.isSelected = true"
         [ngClass]="{'music-sheet_list_item--selected': songItem.isSelected}">
-          <div style="float: left; width: 8%;">{{songItem.rank}}</div> 
-          <div style="float: left; width: 60%;"><a href="javascript:void(0)">{{songItem.songName}}</a></div>
-          <div style="float: left; width: 30%; text-align: right"><a href="javascript:void(0)">{{songItem.author}}</a></div>    
+          <div class="music-sheet_list_item--rank">{{songItem.rank}}</div>
+          <div class="music-sheet_list_item--song">
+            <a href="javascript:void(0)">{{songItem.songName}}</a>
+            <div class="music-sheet_list_item--sq">SQ</div>
+            <span class="fa fa-television"></span> 
+          </div>
+          <div class="music-sheet_list_item--author">
+            <a href="javascript:void(0)">{{songItem.author}}</a>
+          </div>      
         </li>
       </ul>
     </div>

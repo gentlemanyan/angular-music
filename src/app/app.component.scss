@@ -16,7 +16,7 @@ nav {
   padding: 11px 12px;  
   
   & > .navbar_board {
-    display: inline-block;
+    float: left;
     min-width: 300px;
     padding-left: 10px;
     font-size: 22px;
@@ -26,7 +26,7 @@ nav {
   }
 
   & > .navbar_search {
-    display: inline-block;
+    float: left;
     min-width: 460px; 
     padding: 0;
     margin: 0; 
@@ -44,7 +44,7 @@ nav {
   }
 
   & > .navbar_list {
-    display: inline-block; 
+    float: left;
     min-width: 406px; 
     text-align: right;
     line-height: $nav-line-height;

@@ -3,8 +3,6 @@ import {
   OnInit
 } from '@angular/core';
 
-// import { CarouselDirective } from './carousel.directive';
-
 @Component({
   selector: 'recommend',
   providers: [

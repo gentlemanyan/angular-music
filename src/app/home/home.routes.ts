@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import {
   Routes,
+  Router,
   RouterModule,
   ActivatedRoute,
   PreloadAllModules
@@ -35,7 +36,8 @@ const HOMEROUTES: Routes = [
 })
 
 export class HomeRouteModule {
-  constructor( route: ActivatedRoute ) {
+  constructor( route: ActivatedRoute, router: Router ) {
+    router.navigate(['/home/recommend']);
     console.log( 'home 模块路由配置打印：');
     console.log( route );
   }
