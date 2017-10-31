@@ -1,3 +1,18 @@
-<div style="font-size: 20px;margin: auto">
-  hahaha, this is music sheet
+<div>
+  <button type="button">全部歌单</button>
+  <ul class="music-class clearfix">
+    <a href="javascript: void(0)">热门标签:</a>
+    <li class="music-class_item" *ngFor="let item of musicClassItemArr">
+      <a href="javascript: void(0)">{{item.class}}</a>
+    </li>
+  </ul>
+  <div class="recomend-panel">
+      <ul class="recomend-body_4col"  *ngFor="let items of hotItemArr">
+        <li class="recomend-body_4col_item" *ngFor="let childItem of items; let $index = index "  
+        [ngClass]="{'rowEnd': $index > 0 && $index % 3 == 0}" >
+          <a href="javascript:void(0)"> <img [src]="childItem.src" alt="歌单"></a>
+          <h5>{{childItem.content}}</h5>
+        </li>
+      </ul>
+    </div>
 </div>

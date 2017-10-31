@@ -10,9 +10,9 @@ const expressWinston = require( 'express-winston' );
 const expressValidation = require( 'express-validation' );
 const helmet = require( 'helmet');
 //const winstonInstance = require( './winston' );
-const routes = require( '../routes/index.route' );
+const routes = require( '../routes/index' ).route;
 const config = require( './config' );
-const APIError = require( '../helpers/APIError' );
+// const APIError = require( '../helpers/APIError' );
 const path = require( 'path' );
 const appRoot = require( 'app-root-path' );
 // import innograph from 'innograph'
@@ -84,9 +84,9 @@ app.use((req, res, next) => {
 
 // log error in winston transports except when executing test suite
 if (config.env !== 'test') {
-  app.use(expressWinston.errorLogger({
-    winstonInstance
-  }));
+  // app.use(expressWinston.errorLogger({
+  //   winstonInstance
+  // }));
 }
 
 // error handler, send stacktrace only during development

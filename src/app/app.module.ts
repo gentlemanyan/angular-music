@@ -71,6 +71,7 @@ type StoreType = {
    * Import Angular's modules.
    */
   imports: [
+    NgZorroAntdModule.forRoot(),
     CommonModule,
     BrowserModule,
     FormsModule,
@@ -79,8 +80,7 @@ type StoreType = {
     HomeModule,
     RouterModule.forRoot(ROUTES, {
       //useHash: true,
-      preloadingStrategy: PreloadAllModules }),
-    NgZorroAntdModule.forRoot(),
+      preloadingStrategy: PreloadAllModules })
   ],
   /**
    * Expose our Services and Providers into Angular's dependency injection.

@@ -7,53 +7,56 @@ $large-title-padding: 5px;   //大标题的内补
 
 .recomend-panel {
   margin-top: 50px;
-}
-
-.recomend-header {
-  margin-right: $margin-right;
-  padding-bottom: $large-title-padding;
-  border-bottom: 1px solid #ccc;
-
-  & > h2 > a {
+  
+  .recomend-header {
+    margin-right: $margin-right;
     padding-bottom: $large-title-padding;
-    color:#333;
-    text-decoration: none;
-    cursor: default;
-    border-bottom: 4px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  
+    & > h2 > a {
+      padding-bottom: $large-title-padding;
+      color:#333;
+      text-decoration: none;
+      cursor: default;
+      border-bottom: 4px solid #ccc;
+    }
+  
+    & > h2 > button {
+      padding: 2px 5px;
+      font-size: 12px;
+    }
   }
-
-  & > h2 > button {
-    padding: 2px 5px;
-    font-size: 12px;
+  
+  .recomend-body_4col {
+    width: 100%;
+    min-height: 130px;
+    box-sizing: border-box;
+  
+    &:after {
+      display: table;
+      line-height: 0;
+      content: "";
+      clear: both;
+    }
+  
+  
+    .recomend-body_4col_item {
+      float: left;
+      width: 202.5px;
+      min-height: 130px;
+      margin-top: 20px;
+      margin-right: $margin-right;
+      box-shadow: 1px 1px 1px 1px #ccc;
+  
+      & > a {
+        display: inline-block;
+        height: 130px;
+      }
+    }
   }
+  
 }
 
-.hot-pick {
-  width: 100%;
-  min-height: 130px;
-  box-sizing: border-box;
-
-  &:after {
-    display: table;
-    line-height: 0;
-    content: "";
-    clear: both;
-  }
-}
-
-.hot-pick > .hot-pick_item {
-  float: left;
-  width: 202.5px;
-  min-height: 130px;
-  margin-top: 20px;
-  margin-right: $margin-right;
-  box-shadow: 1px 1px 1px 1px #ccc;
-
-  & > a {
-    display: inline-block;
-    height: 130px;
-  }
-}
 
 //个性推荐
 .recomend {

@@ -20,6 +20,10 @@
     list-style: none;
     text-align: center;
 
+    & > .active {
+      color: rgb(189, 39, 39);
+    }
+
     & > a {
       color: #000;
       font-size: 14px;
@@ -27,7 +31,7 @@
     }
 
     & > a:hover {
-      color: #f00;
+      color: rgb(189, 39, 39);
     }
   }
 }

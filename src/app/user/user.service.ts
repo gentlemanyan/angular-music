@@ -12,17 +12,15 @@ export class UserService {
     usercode: '',
     password: '',
     username: '',
-    avatar: '',
+    avatar: '../assets/img/angular-logo.png',
     userstatus: '',
-    usercodeStatus: '',
-    passwordStatus: '',
   };
 
   constructor(private http: Http) {
   }
 
   public login( usercode: String, password: String ): Promise<any> {
-    return this.http.post('/user/login', {})
+    return this.http.post('/user/login', {usercode, password})
       .toPromise()
       .then((response) => response.json().data as any[])
       .catch((e) => {

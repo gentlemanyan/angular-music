@@ -16,10 +16,10 @@ import { Observable } from 'rxjs/Rx';
 export class UserComponent implements OnInit {
   public isVisible = false;
   public validateForm: FormGroup;
-  public user: Object;
+  public user: any;
 
-  constructor( private userservice: UserService, private fb: FormBuilder ) {
-    this.user = userservice.user;
+  constructor( public UserService: UserService, private fb: FormBuilder ) {
+    this.user = UserService.user;
 
     this.validateForm = this.fb.group({
       usercode: [ '', [ Validators.required ], [ this.loginValidControl ] ],
@@ -36,10 +36,10 @@ export class UserComponent implements OnInit {
 
   public hideModal( $event ) {
     this.isVisible = false;
-    this.claerForm();
+    this.clearForm();
   }
 
-  public claerForm() {
+  public clearForm() {
     this.validateForm.reset();
     for (const key in this.validateForm.controls) {
       this.validateForm.controls[ key ].markAsPristine();
@@ -76,20 +76,29 @@ export class UserComponent implements OnInit {
     });
   }
 
-  public login(usercode: String, password: String) {
-    if ( this.userservice.isNull(usercode) ) {
+  public login() {
+    if ( this.UserService.isNull(this.user.usercode) ) {
       alert('请输入用户名');
     }
-    if ( this.userservice.isNull(password) ) {
+    if ( this.UserService.isNull(this.user.password) ) {
       alert('请输入用户密码');
     }
-    let promise = this.userservice.login(usercode, password);
+    let promise = this.UserService.login(this.user.usercode, this.user.password);
 
     promise.then((data) => {
       alert( data );
     }, (error) => {
       alert('网络错误');
     });
+  }
+
+  // 注册
+  public jumpRigester() {
+  }
+
+  // 修改密码
+  public jumpEditPassword() {
+
   }
 
   public ngOnInit() {

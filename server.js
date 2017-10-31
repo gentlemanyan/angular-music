@@ -1,6 +1,7 @@
-const app = require('./server/index');
-const config = require( './server/config/config');
+import app from './server/config/express';
+import config from './server/config/config';
 
 app.listen(config.port, () => {
-    console.info(`server started on port ${config.port} (${config.env})`); // eslint-disable-line no-console
+    console.log(`server success run at port ${config.port}`);
+    console.info(`server started on port ${config.port} (${config.env}).......`); // eslint-disable-line no-console
 });

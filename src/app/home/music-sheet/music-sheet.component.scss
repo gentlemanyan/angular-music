@@ -1,0 +1,76 @@
+$margin-right: 46.67px;   //最右侧的外边距
+$img-width: 190px;
+$large-title-padding: 5px;   //大标题的内补
+
+.rowEnd {
+  margin-right: 0 !important;
+}
+
+.recomend-panel {  
+  .recomend-header {
+    margin-right: $margin-right;
+    padding-bottom: $large-title-padding;
+    border-bottom: 1px solid #ccc;
+  
+    & > h2 > a {
+      padding-bottom: $large-title-padding;
+      color:#333;
+      text-decoration: none;
+      cursor: default;
+      border-bottom: 4px solid #ccc;
+    }
+  
+    & > h2 > button {
+      padding: 2px 5px;
+      font-size: 12px;
+    }
+  }
+  
+  .recomend-body_4col {
+    width: 100%;
+    min-height: 130px;
+    box-sizing: border-box;
+  
+    &:after {
+      display: table;
+      line-height: 0;
+      content: "";
+      clear: both;
+    }
+  
+  
+    .recomend-body_4col_item {
+      float: left;
+      width: $img-width;
+      min-height: 130px;
+      margin-top: 20px;
+      margin-right: $margin-right;
+      box-shadow: 1px 1px 1px 1px #ccc;
+  
+      & > a {
+        display: inline-block;
+        height: 130px;
+      }
+    }
+  }
+  
+}
+
+.music-class {
+  margin-top: 10px;
+  padding: 5px 0;
+
+  a {
+     float: left;
+     color: #333;
+  }
+  .music-class_item {
+    float: left;
+    padding: 0 12px;
+    border-right: 1px solid rgb(226, 222, 222);
+
+    a {
+      color: #888;
+    }
+  }
+}
